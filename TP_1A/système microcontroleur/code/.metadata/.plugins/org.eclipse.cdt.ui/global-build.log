@@ -174,3 +174,2020 @@ Finished building: default.size.stdout
  
 Finished building: TP1.list
  
+13:49:50 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40524	    112	   3800	  44436	   ad94	TP1.elf
+Finished building: default.size.stdout
+ 
+13:50:24 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:142:13: warning: unused variable 'size' [-Wunused-variable]
+  142 |         int size = fillBuffer(buffer, BUFFER_MAX_SIZE);
+      |             ^~~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40260	    112	   3928	  44300	   ad0c	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+13:51:47 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:143:34: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  143 |         printf("Just received : %s \r\n",size);
+      |                                 ~^       ~~~~
+      |                                  |       |
+      |                                  char *  int
+      |                                 %d
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40260	    112	   3928	  44300	   ad0c	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+13:52:51 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c:137:13: warning: 'buffer' defined but not used [-Wunused-variable]
+  137 | static char buffer[BUFFER_MAX_SIZE]={0};
+      |             ^~~~~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40084	    112	   3800	  43996	   abdc	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+13:53:30 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40084	    112	   3800	  43996	   abdc	TP1.elf
+Finished building: default.size.stdout
+ 
+13:53:58 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40084	    112	   3800	  43996	   abdc	TP1.elf
+Finished building: default.size.stdout
+ 
+13:59:10 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c:137:13: warning: 'buffer' defined but not used [-Wunused-variable]
+  137 | static char buffer[BUFFER_MAX_SIZE]={0};
+      |             ^~~~~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40220	    112	   3800	  44132	   ac64	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+13:59:17 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40220	    112	   3800	  44132	   ac64	TP1.elf
+Finished building: default.size.stdout
+ 
+13:59:23 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40220	    112	   3800	  44132	   ac64	TP1.elf
+Finished building: default.size.stdout
+ 
+14:00:49 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40220	    112	   3800	  44132	   ac64	TP1.elf
+Finished building: default.size.stdout
+ 
+14:05:06 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40220	    112	   3928	  44260	   ace4	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+14:05:32 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40220	    112	   3928	  44260	   ace4	TP1.elf
+Finished building: default.size.stdout
+ 
+14:06:16 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40224	    112	   3800	  44136	   ac68	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+14:06:20 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40224	    112	   3800	  44136	   ac68	TP1.elf
+Finished building: default.size.stdout
+ 
+14:07:26 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40224	    112	   3800	  44136	   ac68	TP1.elf
+Finished building: default.size.stdout
+ 
+14:21:07 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40224	    112	   3800	  44136	   ac68	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+14:23:43 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40224	    112	   3800	  44136	   ac68	TP1.elf
+Finished building: default.size.stdout
+ 
+14:25:30 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40224	    112	   3800	  44136	   ac68	TP1.elf
+Finished building: default.size.stdout
+ 
+14:30:51 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40240	    112	   3800	  44152	   ac78	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+14:31:01 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40240	    112	   3800	  44152	   ac78	TP1.elf
+Finished building: default.size.stdout
+ 
+14:32:01 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40240	    112	   3800	  44152	   ac78	TP1.elf
+Finished building: default.size.stdout
+ 
+14:32:14 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40240	    112	   3800	  44152	   ac78	TP1.elf
+Finished building: default.size.stdout
+ 
+14:33:01 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40240	    112	   3800	  44152	   ac78	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+14:38:31 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40228	    112	   3800	  44140	   ac6c	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+14:39:55 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40228	    112	   3800	  44140	   ac6c	TP1.elf
+Finished building: default.size.stdout
+ 
+14:41:01 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40228	    112	   3800	  44140	   ac6c	TP1.elf
+Finished building: default.size.stdout
+ 
+14:44:40 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:156:34: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  156 |         printf("Just received : %s \r\n",size);
+      |                                 ~^       ~~~~
+      |                                  |       |
+      |                                  char *  int
+      |                                 %d
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40532	    112	   3800	  44444	   ad9c	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+14:44:44 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40532	    112	   3800	  44444	   ad9c	TP1.elf
+Finished building: default.size.stdout
+ 
+14:45:07 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40532	    112	   3800	  44444	   ad9c	TP1.elf
+Finished building: default.size.stdout
+ 
+14:48:53 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40532	    112	   3800	  44444	   ad9c	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+14:55:55 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40640	    112	   3800	  44552	   ae08	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:03:42 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40640	    112	   3800	  44552	   ae08	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:04:16 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  40640	    112	   3800	  44552	   ae08	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:07:28 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:163:35: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
+  163 |                 printf("latitude %d :\r\n", getLatitude(buffer));
+      |                                  ~^         ~~~~~~~~~~~~~~~~~~~
+      |                                   |         |
+      |                                   int       double
+      |                                  %f
+../Core/Src/utils.c:164:36: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
+  164 |                 printf("longitude %d :\r\n", getLongitude(buffer));
+      |                                   ~^         ~~~~~~~~~~~~~~~~~~~~
+      |                                    |         |
+      |                                    int       double
+      |                                   %f
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43076	    112	   3800	  46988	   b78c	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:08:22 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43076	    112	   3800	  46988	   b78c	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:08:27 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43076	    112	   3800	  46988	   b78c	TP1.elf
+Finished building: default.size.stdout
+ 
+15:10:38 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  42992	    112	   3800	  46904	   b738	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:13:11 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:164:23: warning: unused variable 'lon' [-Wunused-variable]
+  164 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:163:23: warning: unused variable 'lat' [-Wunused-variable]
+  163 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43000	    112	   3800	  46912	   b740	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:14:59 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43000	    112	   3800	  46912	   b740	TP1.elf
+Finished building: default.size.stdout
+ 
+15:29:49 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43088	    112	   3800	  47000	   b798	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:30:15 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43088	    112	   3800	  47000	   b798	TP1.elf
+Finished building: default.size.stdout
+ 
+15:31:08 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43088	    112	   3800	  47000	   b798	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:31:41 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43088	    112	   3800	  47000	   b798	TP1.elf
+Finished building: default.size.stdout
+ 
+15:31:47 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43088	    112	   3800	  47000	   b798	TP1.elf
+Finished building: default.size.stdout
+ 
+15:33:21 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43088	    112	   3800	  47000	   b798	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:35:01 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43088	    112	   3800	  47000	   b798	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:35:14 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43088	    112	   3800	  47000	   b798	TP1.elf
+Finished building: default.size.stdout
+ 
+15:35:30 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43088	    112	   3800	  47000	   b798	TP1.elf
+Finished building: default.size.stdout
+ 
+15:35:34 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43088	    112	   3800	  47000	   b798	TP1.elf
+Finished building: default.size.stdout
+ 
+15:39:46 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43088	    112	   3800	  47000	   b798	TP1.elf
+Finished building: default.size.stdout
+ 
+15:44:36 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'getLatitude':
+../Core/Src/utils.c:112:46: warning: suggest parentheses around '+' in operand of '&' [-Wparentheses]
+  112 |         float angle = 10*frame[indVirg1]&0x0f+frame[indVirg1+1]&0x0f;
+      |                                          ~~~~^~~~~~~~~~~~~~~~~~
+../Core/Src/utils.c:113:49: error: invalid operands to binary & (have 'double' and 'double')
+  113 |         float angleVirg = 0.01*frame[indVirg1+2]&0x0f+0.001*frame[indVirg1+3]&0x0f;
+      |                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                               |                      |
+      |                               double                 double
+../Core/Src/utils.c:116:44: error: invalid operands to binary & (have 'double' and 'int')
+  116 |                 angleVirg += 0.001*frame[i]&0x0f;
+      |                              ~~~~~~~~~~~~~~^
+      |                                   |
+      |                                   double
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:173:23: warning: unused variable 'lon' [-Wunused-variable]
+  173 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:172:23: warning: unused variable 'lat' [-Wunused-variable]
+  172 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+make: *** [Core/Src/subdir.mk:67: Core/Src/utils.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+15:44:43 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'getLatitude':
+../Core/Src/utils.c:112:46: warning: suggest parentheses around '+' in operand of '&' [-Wparentheses]
+  112 |         float angle = 10*frame[indVirg1]&0x0f+frame[indVirg1+1]&0x0f;
+      |                                          ~~~~^~~~~~~~~~~~~~~~~~
+../Core/Src/utils.c:113:49: error: invalid operands to binary & (have 'double' and 'double')
+  113 |         float angleVirg = 0.01*frame[indVirg1+2]&0x0f+0.001*frame[indVirg1+3]&0x0f;
+      |                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                               |                      |
+      |                               double                 double
+../Core/Src/utils.c:116:44: error: invalid operands to binary & (have 'double' and 'int')
+  116 |                 angleVirg += 0.001*frame[i]&0x0f;
+      |                              ~~~~~~~~~~~~~~^
+      |                                   |
+      |                                   double
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:173:23: warning: unused variable 'lon' [-Wunused-variable]
+  173 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:172:23: warning: unused variable 'lat' [-Wunused-variable]
+  172 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+make: *** [Core/Src/subdir.mk:67: Core/Src/utils.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+15:46:08 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:173:23: warning: unused variable 'lon' [-Wunused-variable]
+  173 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:172:23: warning: unused variable 'lat' [-Wunused-variable]
+  172 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43112	    112	   3800	  47024	   b7b0	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:46:15 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:173:23: warning: unused variable 'lon' [-Wunused-variable]
+  173 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:172:23: warning: unused variable 'lat' [-Wunused-variable]
+  172 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43112	    112	   3800	  47024	   b7b0	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:46:27 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:173:23: warning: unused variable 'lon' [-Wunused-variable]
+  173 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:172:23: warning: unused variable 'lat' [-Wunused-variable]
+  172 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43112	    112	   3800	  47024	   b7b0	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:46:41 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43112	    112	   3800	  47024	   b7b0	TP1.elf
+Finished building: default.size.stdout
+ 
+15:48:26 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:173:23: warning: unused variable 'lon' [-Wunused-variable]
+  173 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:172:23: warning: unused variable 'lat' [-Wunused-variable]
+  172 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43232	    112	   3800	  47144	   b828	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:48:31 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43232	    112	   3800	  47144	   b828	TP1.elf
+Finished building: default.size.stdout
+ 
+15:48:49 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43232	    112	   3800	  47144	   b828	TP1.elf
+Finished building: default.size.stdout
+ 
+15:50:10 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43232	    112	   3800	  47144	   b828	TP1.elf
+Finished building: default.size.stdout
+ 
+15:55:59 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'getLatitude':
+../Core/Src/utils.c:115:25: error: expected '=', ',', ';', 'asm' or '__attribute__' before '+=' token
+  115 |         float angleVirg += 0.1*(frame[indVirg1+5]&0xf)+0.01*(frame[indVirg1+6]&0xf)++0.001*(frame[indVirg1+7]&0xf);
+      |                         ^~
+../Core/Src/utils.c:115:25: error: expected expression before '+=' token
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:175:23: warning: unused variable 'lon' [-Wunused-variable]
+  175 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:174:23: warning: unused variable 'lat' [-Wunused-variable]
+  174 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+make: *** [Core/Src/subdir.mk:67: Core/Src/utils.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+15:56:17 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'getLatitude':
+../Core/Src/utils.c:115:78: error: lvalue required as increment operand
+  115 |         angleVirg += 0.1*(frame[indVirg1+5]&0xf)+0.01*(frame[indVirg1+6]&0xf)++0.001*(frame[indVirg1+7]&0xf);
+      |                                                                              ^~
+../Core/Src/utils.c:115:80: error: expected ';' before numeric constant
+  115 |         angleVirg += 0.1*(frame[indVirg1+5]&0xf)+0.01*(frame[indVirg1+6]&0xf)++0.001*(frame[indVirg1+7]&0xf);
+      |                                                                                ^~~~~
+      |                                                                                ;
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:175:23: warning: unused variable 'lon' [-Wunused-variable]
+  175 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:174:23: warning: unused variable 'lat' [-Wunused-variable]
+  174 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+make: *** [Core/Src/subdir.mk:67: Core/Src/utils.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+15:56:40 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:175:23: warning: unused variable 'lon' [-Wunused-variable]
+  175 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:174:23: warning: unused variable 'lat' [-Wunused-variable]
+  174 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43264	    112	   3800	  47176	   b848	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:56:45 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43264	    112	   3800	  47176	   b848	TP1.elf
+Finished building: default.size.stdout
+ 
+15:56:55 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43264	    112	   3800	  47176	   b848	TP1.elf
+Finished building: default.size.stdout
+ 
+15:58:11 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43296	    112	   3800	  47208	   b868	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+15:59:33 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43296	    112	   3800	  47208	   b868	TP1.elf
+Finished building: default.size.stdout
+ 
+16:09:12 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43280	    112	   3800	  47192	   b858	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+16:10:15 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43288	    112	   3800	  47200	   b860	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+16:10:35 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43288	    112	   3800	  47200	   b860	TP1.elf
+Finished building: default.size.stdout
+ 
+16:10:38 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43288	    112	   3800	  47200	   b860	TP1.elf
+Finished building: default.size.stdout
+ 
+16:27:40 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/adc.d" -MT"Core/Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/adc.o"
+arm-none-eabi-gcc "../Core/Src/fonts.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fonts.d" -MT"Core/Src/fonts.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/fonts.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/i2c.d" -MT"Core/Src/i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/i2c.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
+arm-none-eabi-gcc "../Core/Src/ssd1315.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1315.d" -MT"Core/Src/ssd1315.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1315.o"
+arm-none-eabi-gcc "../Core/Src/ssd1315_physical_layer_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1315_physical_layer_i2c.d" -MT"Core/Src/ssd1315_physical_layer_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1315_physical_layer_i2c.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_timebase_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_timebase_tim.d" -MT"Core/Src/stm32l4xx_hal_timebase_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_timebase_tim.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32l4xx.d" -MT"Core/Src/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32l4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc "../Core/Src/vile.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/vile.d" -MT"Core/Src/vile.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/vile.o"
+In file included from ../Core/Src/vile.c:1:
+../Core/Inc/vile.h:5:1: warning: useless storage class specifier in empty declaration
+    5 | };
+      | ^
+../Core/Src/vile.c:3:7: error: unknown type name 'VILLE'
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |       ^~~~~
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/vile.c:3:1: warning: braces around scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      | ^~~~~
+../Core/Src/vile.c:3:1: note: (near initialization for 'ville[0]')
+../Core/Src/vile.c:3:27: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                           ^~~~~~
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/vile.c:3:27: note: (near initialization for 'ville[0]')
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+../Core/Src/vile.c:3:34: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                  ^~~~~~~
+../Core/Src/vile.c:3:34: note: (near initialization for 'ville[0]')
+../Core/Src/vile.c:3:42: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                          ^~~~~~~
+../Core/Src/vile.c:3:42: note: (near initialization for 'ville[0]')
+../Core/Src/vile.c:3:1: warning: braces around scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      | ^~~~~
+../Core/Src/vile.c:3:1: note: (near initialization for 'ville[1]')
+../Core/Src/vile.c:3:52: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                    ^~~~~~~
+../Core/Src/vile.c:3:52: note: (near initialization for 'ville[1]')
+../Core/Src/vile.c:3:60: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                            ^~~~~~
+../Core/Src/vile.c:3:60: note: (near initialization for 'ville[1]')
+../Core/Src/vile.c:3:67: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                                   ^~~~~
+../Core/Src/vile.c:3:67: note: (near initialization for 'ville[1]')
+../Core/Src/vile.c:3:1: warning: braces around scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      | ^~~~~
+../Core/Src/vile.c:3:1: note: (near initialization for 'ville[2]')
+../Core/Src/vile.c:3:75: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                                           ^~~~~~~~~
+../Core/Src/vile.c:3:75: note: (near initialization for 'ville[2]')
+../Core/Src/vile.c:3:86: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                                                      ^~~~~~
+../Core/Src/vile.c:3:86: note: (near initialization for 'ville[2]')
+../Core/Src/vile.c:3:93: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                                                             ^
+../Core/Src/vile.c:3:93: note: (near initialization for 'ville[2]')
+../Core/Src/vile.c:3:1: warning: braces around scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      | ^~~~~
+../Core/Src/vile.c:3:1: note: (near initialization for 'ville[3]')
+../Core/Src/vile.c:3:103: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                                                                       ^~~~~~~~~~~
+../Core/Src/vile.c:3:103: note: (near initialization for 'ville[3]')
+../Core/Src/vile.c:3:115: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                                                                                   ^~~~~~
+../Core/Src/vile.c:3:115: note: (near initialization for 'ville[3]')
+../Core/Src/vile.c:3:122: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                                                                                          ^~~~~
+../Core/Src/vile.c:3:122: note: (near initialization for 'ville[3]')
+../Core/Src/vile.c:4:1: error: expected identifier or '(' before '}' token
+    4 | }
+      | ^
+make: *** [Core/Src/subdir.mk:70: Core/Src/vile.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:28:36 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/vile.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/vile.d" -MT"Core/Src/vile.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/vile.o"
+In file included from ../Core/Src/vile.c:1:
+../Core/Inc/vile.h:5:1: warning: useless storage class specifier in empty declaration
+    5 | };
+      | ^
+../Core/Src/vile.c:3:7: error: unknown type name 'VILLE'
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |       ^~~~~
+../Core/Src/vile.c:3:1: warning: braces around scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      | ^~~~~
+../Core/Src/vile.c:3:1: note: (near initialization for 'ville[0]')
+../Core/Src/vile.c:3:27: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                           ^~~~~~
+../Core/Src/vile.c:3:27: note: (near initialization for 'ville[0]')
+../Core/Src/vile.c:3:34: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                  ^~~~~~~
+../Core/Src/vile.c:3:34: note: (near initialization for 'ville[0]')
+../Core/Src/vile.c:3:42: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                          ^~~~~~~
+../Core/Src/vile.c:3:42: note: (near initialization for 'ville[0]')
+../Core/Src/vile.c:3:1: warning: braces around scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      | ^~~~~
+../Core/Src/vile.c:3:1: note: (near initialization for 'ville[1]')
+../Core/Src/vile.c:3:52: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                    ^~~~~~~
+../Core/Src/vile.c:3:52: note: (near initialization for 'ville[1]')
+../Core/Src/vile.c:3:60: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                            ^~~~~~
+../Core/Src/vile.c:3:60: note: (near initialization for 'ville[1]')
+../Core/Src/vile.c:3:67: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                                   ^~~~~
+../Core/Src/vile.c:3:67: note: (near initialization for 'ville[1]')
+../Core/Src/vile.c:3:1: warning: braces around scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      | ^~~~~
+../Core/Src/vile.c:3:1: note: (near initialization for 'ville[2]')
+../Core/Src/vile.c:3:75: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                                           ^~~~~~~~~
+../Core/Src/vile.c:3:75: note: (near initialization for 'ville[2]')
+../Core/Src/vile.c:3:86: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                                                      ^~~~~~
+../Core/Src/vile.c:3:86: note: (near initialization for 'ville[2]')
+../Core/Src/vile.c:3:93: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                                                             ^
+../Core/Src/vile.c:3:93: note: (near initialization for 'ville[2]')
+../Core/Src/vile.c:3:1: warning: braces around scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      | ^~~~~
+../Core/Src/vile.c:3:1: note: (near initialization for 'ville[3]')
+../Core/Src/vile.c:3:103: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                                                                       ^~~~~~~~~~~
+../Core/Src/vile.c:3:103: note: (near initialization for 'ville[3]')
+../Core/Src/vile.c:3:115: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                                                                                   ^~~~~~
+../Core/Src/vile.c:3:115: note: (near initialization for 'ville[3]')
+../Core/Src/vile.c:3:122: warning: excess elements in scalar initializer
+    3 | const VILLE ville[4] = { {"Kiev",50.4510,30.5234},{"Cergy",49.033,2.066},{"Chicago", 41.385,-87.623},{"Barcelone",41.385,2.173}};
+      |                                                                                                                          ^~~~~
+../Core/Src/vile.c:3:122: note: (near initialization for 'ville[3]')
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/vile.h:5:1: warning: useless storage class specifier in empty declaration
+    5 | };
+      | ^
+make: *** [Core/Src/subdir.mk:70: Core/Src/vile.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:29:44 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/vile.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/vile.d" -MT"Core/Src/vile.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/vile.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43288	    112	   3800	  47200	   b860	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+16:35:24 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/adc.d" -MT"Core/Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/adc.o"
+arm-none-eabi-gcc "../Core/Src/fonts.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fonts.d" -MT"Core/Src/fonts.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/fonts.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/i2c.d" -MT"Core/Src/i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/i2c.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
+arm-none-eabi-gcc "../Core/Src/ssd1315.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1315.d" -MT"Core/Src/ssd1315.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1315.o"
+arm-none-eabi-gcc "../Core/Src/ssd1315_physical_layer_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1315_physical_layer_i2c.d" -MT"Core/Src/ssd1315_physical_layer_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1315_physical_layer_i2c.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc "../Core/Src/vile.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/vile.d" -MT"Core/Src/vile.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/vile.o"
+../Core/Src/vile.c: In function 'norme':
+../Core/Src/vile.c:12:68: error: invalid operands to binary ^ (have 'float' and 'int')
+   12 |         return (v->latitude-latitude)^2 + ((v->longitude-longitude)^2 cos((v->latitude+latitude)/2));
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                         |
+      |                                                         float
+../Core/Src/vile.c:12:70: error: expected ')' before 'cos'
+   12 |         return (v->latitude-latitude)^2 + ((v->longitude-longitude)^2 cos((v->latitude+latitude)/2));
+      |                                           ~                          ^~~~
+      |                                                                      )
+../Core/Src/vile.c:13:1: warning: control reaches end of non-void function [-Wreturn-type]
+   13 | }
+      | ^
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+make: *** [Core/Src/subdir.mk:70: Core/Src/vile.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:37:18 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/vile.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/vile.d" -MT"Core/Src/vile.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/vile.o"
+../Core/Src/vile.c: In function 'norme':
+../Core/Src/vile.c:12:68: error: invalid operands to binary ^ (have 'float' and 'float')
+   12 |         return (v->latitude-latitude)^2 + ((v->longitude-longitude)^2 * cosf((v->latitude+latitude)/2))^2;
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                         |             |
+      |                                                         float         float
+../Core/Src/vile.c:13:1: warning: control reaches end of non-void function [-Wreturn-type]
+   13 | }
+      | ^
+make: *** [Core/Src/subdir.mk:70: Core/Src/vile.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:39:22 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/vile.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/vile.d" -MT"Core/Src/vile.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/vile.o"
+../Core/Src/vile.c:11:7: error: conflicting types for 'pow'; have 'float(float)'
+   11 | float pow(float x){
+      |       ^~~
+In file included from ../Core/Inc/main.h:31,
+                 from ../Core/Src/vile.c:2:
+C:\ST\STM32CubeIDE_2.2.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740\tools\bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/math.h:111:15: note: previous declaration of 'pow' with type 'double(double,  double)'
+  111 | extern double pow (double, double);
+      |               ^~~
+make: *** [Core/Src/subdir.mk:70: Core/Src/vile.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:40:00 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/vile.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/vile.d" -MT"Core/Src/vile.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/vile.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43288	    112	   3800	  47200	   b860	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+16:40:32 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43288	    112	   3800	  47200	   b860	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+16:55:18 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/adc.d" -MT"Core/Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/adc.o"
+arm-none-eabi-gcc "../Core/Src/array.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/array.d" -MT"Core/Src/array.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/array.o"
+arm-none-eabi-gcc "../Core/Src/fonts.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fonts.d" -MT"Core/Src/fonts.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/fonts.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/i2c.d" -MT"Core/Src/i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/i2c.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
+arm-none-eabi-gcc "../Core/Src/ssd1315.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1315.d" -MT"Core/Src/ssd1315.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1315.o"
+arm-none-eabi-gcc "../Core/Src/ssd1315_physical_layer_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1315_physical_layer_i2c.d" -MT"Core/Src/ssd1315_physical_layer_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1315_physical_layer_i2c.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_timebase_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_timebase_tim.d" -MT"Core/Src/stm32l4xx_hal_timebase_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_timebase_tim.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+../Core/Src/array.c: In function 'init_rand_tab':
+../Core/Src/array.c:10:24: error: 'ARRAY_SIZE' undeclared (first use in this function)
+   10 |         for(int i=0; i<ARRAY_SIZE; i++){
+      |                        ^~~~~~~~~~
+../Core/Src/array.c:10:24: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/array.c:11:29: error: implicit declaration of function 'rand' [-Wimplicit-function-declaration]
+   11 |                 array[i] = (rand()%ARRAY_SIZE);
+      |                             ^~~~
+../Core/Src/array.c: In function 'print_array':
+../Core/Src/array.c:16:9: error: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   16 |         printf("[ ");
+      |         ^~~~~~
+../Core/Src/array.c:8:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    7 | #include "main.h"
+  +++ |+#include <stdio.h>
+    8 | 
+../Core/Src/array.c:16:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   16 |         printf("[ ");
+      |         ^~~~~~
+../Core/Src/array.c:16:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/array.c:17:24: error: 'ARRAY_SIZE' undeclared (first use in this function)
+   17 |         for(int i=0; i<ARRAY_SIZE; i++){
+      |                        ^~~~~~~~~~
+../Core/Src/array.c: In function 'tri_insertion':
+../Core/Src/array.c:24:24: error: 'ARRAY_SIZE' undeclared (first use in this function)
+   24 |         for(int i=1; i<ARRAY_SIZE; i++){
+      |                        ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:73: Core/Src/array.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:55:46 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/adc.d" -MT"Core/Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/adc.o"
+arm-none-eabi-gcc "../Core/Src/fonts.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fonts.d" -MT"Core/Src/fonts.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/fonts.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/i2c.d" -MT"Core/Src/i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/i2c.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
+arm-none-eabi-gcc "../Core/Src/ssd1315.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1315.d" -MT"Core/Src/ssd1315.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1315.o"
+arm-none-eabi-gcc "../Core/Src/ssd1315_physical_layer_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1315_physical_layer_i2c.d" -MT"Core/Src/ssd1315_physical_layer_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1315_physical_layer_i2c.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_timebase_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_timebase_tim.d" -MT"Core/Src/stm32l4xx_hal_timebase_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_timebase_tim.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32l4xx.d" -MT"Core/Src/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32l4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+arm-none-eabi-gcc "../Core/Src/vile.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/vile.d" -MT"Core/Src/vile.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/vile.o"
+../Core/Src/vile.c: In function 'findNearest':
+../Core/Src/vile.c:20:24: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'tab'
+   20 |         VILLE* nearest tab[0];
+      |                        ^~~
+../Core/Src/vile.c:20:27: warning: statement with no effect [-Wunused-value]
+   20 |         VILLE* nearest tab[0];
+      |                        ~~~^~~
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+../Core/Src/vile.c:21:31: error: 'nearest' undeclared (first use in this function)
+   21 |         float v_norme = norme(nearest, latitude, longitude);
+      |                               ^~~~~~~
+../Core/Src/vile.c:21:31: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/vile.c:23:42: error: incompatible type for argument 1 of 'norme'
+   23 |                 float n_norme = norme(tab[i], latitude, longitude);
+      |                                       ~~~^~~
+      |                                          |
+      |                                          VILLE {aka struct ville}
+../Core/Src/vile.c:15:20: note: expected 'VILLE *' {aka 'struct ville *'} but argument is of type 'VILLE' {aka 'struct ville'}
+   15 | float norme(VILLE *v, float latitude, float longitude){
+      |             ~~~~~~~^
+../Core/Src/vile.c:30:1: warning: control reaches end of non-void function [-Wreturn-type]
+   30 | }
+      | ^
+make: *** [Core/Src/subdir.mk:70: Core/Src/vile.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:56:09 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/vile.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/vile.d" -MT"Core/Src/vile.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/vile.o"
+../Core/Src/vile.c: In function 'findNearest':
+../Core/Src/vile.c:20:26: error: incompatible types when initializing type 'VILLE *' {aka 'struct ville *'} using type 'VILLE' {aka 'struct ville'}
+   20 |         VILLE* nearest = tab[0];
+      |                          ^~~
+../Core/Src/vile.c:23:42: error: incompatible type for argument 1 of 'norme'
+   23 |                 float n_norme = norme(tab[i], latitude, longitude);
+      |                                       ~~~^~~
+      |                                          |
+      |                                          VILLE {aka struct ville}
+../Core/Src/vile.c:15:20: note: expected 'VILLE *' {aka 'struct ville *'} but argument is of type 'VILLE' {aka 'struct ville'}
+   15 | float norme(VILLE *v, float latitude, float longitude){
+      |             ~~~~~~~^
+../Core/Src/vile.c:25:35: error: incompatible types when assigning to type 'VILLE *' {aka 'struct ville *'} from type 'VILLE' {aka 'struct ville'}
+   25 |                         nearest = tab[i];
+      |                                   ^~~
+make: *** [Core/Src/subdir.mk:70: Core/Src/vile.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:57:23 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/vile.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/vile.d" -MT"Core/Src/vile.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/vile.o"
+../Core/Src/vile.c: In function 'findNearest':
+../Core/Src/vile.c:20:26: error: incompatible types when initializing type 'VILLE *' {aka 'struct ville *'} using type 'VILLE' {aka 'struct ville'}
+   20 |         VILLE* nearest = tab[0];
+      |                          ^~~
+../Core/Src/vile.c:21:31: error: passing argument 1 of 'norme' from incompatible pointer type [-Wincompatible-pointer-types]
+   21 |         float v_norme = norme(&nearest, latitude, longitude);
+      |                               ^~~~~~~~
+      |                               |
+      |                               VILLE ** {aka struct ville **}
+../Core/Src/vile.c:15:20: note: expected 'VILLE *' {aka 'struct ville *'} but argument is of type 'VILLE **' {aka 'struct ville **'}
+   15 | float norme(VILLE *v, float latitude, float longitude){
+      |             ~~~~~~~^
+../Core/Src/vile.c:23:42: error: incompatible type for argument 1 of 'norme'
+   23 |                 float n_norme = norme(tab[i], latitude, longitude);
+      |                                       ~~~^~~
+      |                                          |
+      |                                          VILLE {aka struct ville}
+../Core/Src/vile.c:15:20: note: expected 'VILLE *' {aka 'struct ville *'} but argument is of type 'VILLE' {aka 'struct ville'}
+   15 | float norme(VILLE *v, float latitude, float longitude){
+      |             ~~~~~~~^
+../Core/Src/vile.c:25:35: error: incompatible types when assigning to type 'VILLE *' {aka 'struct ville *'} from type 'VILLE' {aka 'struct ville'}
+   25 |                         nearest = tab[i];
+      |                                   ^~~
+make: *** [Core/Src/subdir.mk:70: Core/Src/vile.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:57:47 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/vile.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/vile.d" -MT"Core/Src/vile.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/vile.o"
+../Core/Src/vile.c: In function 'findNearest':
+../Core/Src/vile.c:20:26: error: incompatible types when initializing type 'VILLE *' {aka 'struct ville *'} using type 'VILLE' {aka 'struct ville'}
+   20 |         VILLE* nearest = tab[0];
+      |                          ^~~
+../Core/Src/vile.c:23:42: error: incompatible type for argument 1 of 'norme'
+   23 |                 float n_norme = norme(tab[i], latitude, longitude);
+      |                                       ~~~^~~
+      |                                          |
+      |                                          VILLE {aka struct ville}
+../Core/Src/vile.c:15:20: note: expected 'VILLE *' {aka 'struct ville *'} but argument is of type 'VILLE' {aka 'struct ville'}
+   15 | float norme(VILLE *v, float latitude, float longitude){
+      |             ~~~~~~~^
+../Core/Src/vile.c:25:35: error: incompatible types when assigning to type 'VILLE *' {aka 'struct ville *'} from type 'VILLE' {aka 'struct ville'}
+   25 |                         nearest = tab[i];
+      |                                   ^~~
+make: *** [Core/Src/subdir.mk:70: Core/Src/vile.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:58:56 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/vile.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/vile.d" -MT"Core/Src/vile.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/vile.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  43288	    112	   3800	  47200	   b860	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+17:04:30 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/adc.d" -MT"Core/Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/adc.o"
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+arm-none-eabi-gcc "../Core/Src/fonts.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fonts.d" -MT"Core/Src/fonts.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/fonts.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/i2c.d" -MT"Core/Src/i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/i2c.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
+arm-none-eabi-gcc "../Core/Src/ssd1315.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1315.d" -MT"Core/Src/ssd1315.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1315.o"
+arm-none-eabi-gcc "../Core/Src/ssd1315_physical_layer_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1315_physical_layer_i2c.d" -MT"Core/Src/ssd1315_physical_layer_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1315_physical_layer_i2c.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_timebase_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_timebase_tim.d" -MT"Core/Src/stm32l4xx_hal_timebase_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_timebase_tim.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32l4xx.d" -MT"Core/Src/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32l4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:172:44: error: 'ville' undeclared (first use in this function)
+  172 |         snprintf(buffer, 16, "Ville : %s", ville->nom);
+      |                                            ^~~~~
+../Core/Src/utils.c:172:44: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:70: Core/Src/utils.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:05:14 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/utils.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Inc/cityDataBase.h:7: multiple definition of `ville'; ./Core/Src/cityDataBase.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Inc/cityDataBase.h:7: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: TP1.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:05:29 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/utils.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Inc/cityDataBase.h:7: multiple definition of `ville'; ./Core/Src/cityDataBase.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Inc/cityDataBase.h:7: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: TP1.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:06:08 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/utils.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Inc/cityDataBase.h:7: multiple definition of `ville'; ./Core/Src/cityDataBase.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Inc/cityDataBase.h:7: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: TP1.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:07:05 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/utils.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Inc/cityDataBase.h:7: multiple definition of `ville'; ./Core/Src/cityDataBase.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Inc/cityDataBase.h:7: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: TP1.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:07:55 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/utils.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Inc/cityDataBase.h:7: multiple definition of `ville'; ./Core/Src/cityDataBase.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Inc/cityDataBase.h:7: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: TP1.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:08:01 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/utils.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Inc/cityDataBase.h:7: multiple definition of `ville'; ./Core/Src/cityDataBase.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Inc/cityDataBase.h:7: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: TP1.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:08:25 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/cityDataBase.c:4:1: warning: data definition has no type or storage class
+    4 | ville = {
+      | ^~~~~
+../Core/Src/cityDataBase.c:4:1: error: type defaults to 'int' in declaration of 'ville' [-Wimplicit-int]
+../Core/Src/cityDataBase.c:4:1: error: conflicting types for 'ville'; have 'int'
+In file included from ../Core/Src/cityDataBase.c:1:
+../Core/Inc/cityDataBase.h:7:13: note: previous declaration of 'ville' with type 'const VILLE[]' {aka 'const struct ville[]'}
+    7 | const VILLE ville[];
+      |             ^~~~~
+make: *** [Core/Src/subdir.mk:70: Core/Src/cityDataBase.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+In file included from ../Core/Src/utils.c:13:
+../Core/Inc/cityDataBase.h: At top level:
+../Core/Inc/cityDataBase.h:7:13: warning: array 'ville' assumed to have one element
+    7 | const VILLE ville[];
+      |             ^~~~~
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:09:12 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/cityDataBase.c:4:1: warning: data definition has no type or storage class
+    4 | ville[4] = {
+      | ^~~~~
+../Core/Src/cityDataBase.c:4:1: error: type defaults to 'int' in declaration of 'ville' [-Wimplicit-int]
+../Core/Src/cityDataBase.c:4:1: error: conflicting types for 'ville'; have 'int[4]'
+In file included from ../Core/Src/cityDataBase.c:1:
+../Core/Inc/cityDataBase.h:7:8: note: previous declaration of 'ville' with type 'VILLE *' {aka 'struct ville *'}
+    7 | VILLE *ville;
+      |        ^~~~~
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+make: *** [Core/Src/subdir.mk:70: Core/Src/cityDataBase.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:09:20 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+../Core/Src/cityDataBase.c:4:1: warning: data definition has no type or storage class
+    4 | ville = {
+      | ^~~~~
+../Core/Src/cityDataBase.c:4:1: error: type defaults to 'int' in declaration of 'ville' [-Wimplicit-int]
+../Core/Src/cityDataBase.c:4:1: error: conflicting types for 'ville'; have 'int'
+In file included from ../Core/Src/cityDataBase.c:1:
+../Core/Inc/cityDataBase.h:7:8: note: previous declaration of 'ville' with type 'VILLE *' {aka 'struct ville *'}
+    7 | VILLE *ville;
+      |        ^~~~~
+make: *** [Core/Src/subdir.mk:70: Core/Src/cityDataBase.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:10:49 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/cityDataBase.c:4:7: error: conflicting types for 'ville'; have 'VILLE[4]' {aka 'struct ville[4]'}
+    4 | VILLE ville[4] = {
+      |       ^~~~~
+In file included from ../Core/Src/cityDataBase.c:1:
+../Core/Inc/cityDataBase.h:7:8: note: previous declaration of 'ville' with type 'VILLE *' {aka 'struct ville *'}
+    7 | VILLE *ville;
+      |        ^~~~~
+make: *** [Core/Src/subdir.mk:70: Core/Src/cityDataBase.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:11:19 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:176:23: warning: unused variable 'lon' [-Wunused-variable]
+  176 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:175:23: warning: unused variable 'lat' [-Wunused-variable]
+  175 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/utils.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Src/utils.c:133: multiple definition of `ville'; ./Core/Src/cityDataBase.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Src/cityDataBase.c:4: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: TP1.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:11:48 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/utils.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Src/utils.c:133: multiple definition of `ville'; ./Core/Src/cityDataBase.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Src/cityDataBase.c:4: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: TP1.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:12:27 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:172:44: error: 'ville' undeclared (first use in this function)
+  172 |         snprintf(buffer, 16, "Ville : %s", ville->nom);
+      |                                            ^~~~~
+../Core/Src/utils.c:172:44: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:70: Core/Src/utils.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:13:03 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/utils.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Inc/cityDataBase.h:7: multiple definition of `ville'; ./Core/Src/cityDataBase.o:C:/Users/redwo/Documents/travail/ENSEA/ENSEA_TP/TP_1A/système microcontroleur/code/TP1/Debug/../Core/Inc/cityDataBase.h:7: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: TP1.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:13:22 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/cityDataBase.c:4:1: warning: data definition has no type or storage class
+    4 | ville[4] = {
+      | ^~~~~
+../Core/Src/cityDataBase.c:4:1: error: type defaults to 'int' in declaration of 'ville' [-Wimplicit-int]
+../Core/Src/cityDataBase.c:4:1: error: conflicting types for 'ville'; have 'int[4]'
+In file included from ../Core/Src/cityDataBase.c:1:
+../Core/Inc/cityDataBase.h:7:13: note: previous definition of 'ville' with type 'const VILLE[4]' {aka 'const struct ville[4]'}
+    7 | const VILLE ville[4] = {0};
+      |             ^~~~~
+../Core/Src/cityDataBase.c:5:17: warning: braces around scalar initializer
+    5 |                 {"Kiev",50.4510,30.5234},
+      |                 ^
+../Core/Src/cityDataBase.c:5:17: note: (near initialization for 'ville[0]')
+../Core/Src/cityDataBase.c:5:18: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    5 |                 {"Kiev",50.4510,30.5234},
+      |                  ^~~~~~
+../Core/Src/cityDataBase.c:5:18: note: (near initialization for 'ville[0]')
+../Core/Src/cityDataBase.c:5:25: warning: excess elements in scalar initializer
+    5 |                 {"Kiev",50.4510,30.5234},
+      |                         ^~~~~~~
+../Core/Src/cityDataBase.c:5:25: note: (near initialization for 'ville[0]')
+../Core/Src/cityDataBase.c:5:33: warning: excess elements in scalar initializer
+    5 |                 {"Kiev",50.4510,30.5234},
+      |                                 ^~~~~~~
+../Core/Src/cityDataBase.c:5:33: note: (near initialization for 'ville[0]')
+../Core/Src/cityDataBase.c:6:17: warning: braces around scalar initializer
+    6 |                 {"Cergy",49.033,2.066},
+      |                 ^
+../Core/Src/cityDataBase.c:6:17: note: (near initialization for 'ville[1]')
+../Core/Src/cityDataBase.c:6:18: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    6 |                 {"Cergy",49.033,2.066},
+      |                  ^~~~~~~
+../Core/Src/cityDataBase.c:6:18: note: (near initialization for 'ville[1]')
+../Core/Src/cityDataBase.c:6:26: warning: excess elements in scalar initializer
+    6 |                 {"Cergy",49.033,2.066},
+      |                          ^~~~~~
+../Core/Src/cityDataBase.c:6:26: note: (near initialization for 'ville[1]')
+../Core/Src/cityDataBase.c:6:33: warning: excess elements in scalar initializer
+    6 |                 {"Cergy",49.033,2.066},
+      |                                 ^~~~~
+../Core/Src/cityDataBase.c:6:33: note: (near initialization for 'ville[1]')
+../Core/Src/cityDataBase.c:7:17: warning: braces around scalar initializer
+    7 |                 {"Chicago", 41.385,-87.623},
+      |                 ^
+../Core/Src/cityDataBase.c:7:17: note: (near initialization for 'ville[2]')
+../Core/Src/cityDataBase.c:7:18: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    7 |                 {"Chicago", 41.385,-87.623},
+      |                  ^~~~~~~~~
+../Core/Src/cityDataBase.c:7:18: note: (near initialization for 'ville[2]')
+../Core/Src/cityDataBase.c:7:29: warning: excess elements in scalar initializer
+    7 |                 {"Chicago", 41.385,-87.623},
+      |                             ^~~~~~
+../Core/Src/cityDataBase.c:7:29: note: (near initialization for 'ville[2]')
+../Core/Src/cityDataBase.c:7:36: warning: excess elements in scalar initializer
+    7 |                 {"Chicago", 41.385,-87.623},
+      |                                    ^
+../Core/Src/cityDataBase.c:7:36: note: (near initialization for 'ville[2]')
+../Core/Src/cityDataBase.c:8:17: warning: braces around scalar initializer
+    8 |                 {"Barcelone",41.385,2.173}
+      |                 ^
+../Core/Src/cityDataBase.c:8:17: note: (near initialization for 'ville[3]')
+../Core/Src/cityDataBase.c:8:18: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    8 |                 {"Barcelone",41.385,2.173}
+      |                  ^~~~~~~~~~~
+../Core/Src/cityDataBase.c:8:18: note: (near initialization for 'ville[3]')
+../Core/Src/cityDataBase.c:8:30: warning: excess elements in scalar initializer
+    8 |                 {"Barcelone",41.385,2.173}
+      |                              ^~~~~~
+../Core/Src/cityDataBase.c:8:30: note: (near initialization for 'ville[3]')
+../Core/Src/cityDataBase.c:8:37: warning: excess elements in scalar initializer
+    8 |                 {"Barcelone",41.385,2.173}
+      |                                     ^~~~~
+../Core/Src/cityDataBase.c:8:37: note: (near initialization for 'ville[3]')
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+make: *** [Core/Src/subdir.mk:70: Core/Src/cityDataBase.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:13:38 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/cityDataBase.c:4:1: warning: data definition has no type or storage class
+    4 | ville[4] = {
+      | ^~~~~
+../Core/Src/cityDataBase.c:4:1: error: type defaults to 'int' in declaration of 'ville' [-Wimplicit-int]
+../Core/Src/cityDataBase.c:4:1: error: conflicting types for 'ville'; have 'int[4]'
+In file included from ../Core/Src/cityDataBase.c:1:
+../Core/Inc/cityDataBase.h:7:13: note: previous definition of 'ville' with type 'const VILLE[4]' {aka 'const struct ville[4]'}
+    7 | const VILLE ville[4] = {};
+      |             ^~~~~
+../Core/Src/cityDataBase.c:5:17: warning: braces around scalar initializer
+    5 |                 {"Kiev",50.4510,30.5234},
+      |                 ^
+../Core/Src/cityDataBase.c:5:17: note: (near initialization for 'ville[0]')
+../Core/Src/cityDataBase.c:5:18: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    5 |                 {"Kiev",50.4510,30.5234},
+      |                  ^~~~~~
+../Core/Src/cityDataBase.c:5:18: note: (near initialization for 'ville[0]')
+../Core/Src/cityDataBase.c:5:25: warning: excess elements in scalar initializer
+    5 |                 {"Kiev",50.4510,30.5234},
+      |                         ^~~~~~~
+../Core/Src/cityDataBase.c:5:25: note: (near initialization for 'ville[0]')
+../Core/Src/cityDataBase.c:5:33: warning: excess elements in scalar initializer
+    5 |                 {"Kiev",50.4510,30.5234},
+      |                                 ^~~~~~~
+../Core/Src/cityDataBase.c:5:33: note: (near initialization for 'ville[0]')
+../Core/Src/cityDataBase.c:6:17: warning: braces around scalar initializer
+    6 |                 {"Cergy",49.033,2.066},
+      |                 ^
+../Core/Src/cityDataBase.c:6:17: note: (near initialization for 'ville[1]')
+../Core/Src/cityDataBase.c:6:18: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    6 |                 {"Cergy",49.033,2.066},
+      |                  ^~~~~~~
+../Core/Src/cityDataBase.c:6:18: note: (near initialization for 'ville[1]')
+../Core/Src/cityDataBase.c:6:26: warning: excess elements in scalar initializer
+    6 |                 {"Cergy",49.033,2.066},
+      |                          ^~~~~~
+../Core/Src/cityDataBase.c:6:26: note: (near initialization for 'ville[1]')
+../Core/Src/cityDataBase.c:6:33: warning: excess elements in scalar initializer
+    6 |                 {"Cergy",49.033,2.066},
+      |                                 ^~~~~
+../Core/Src/cityDataBase.c:6:33: note: (near initialization for 'ville[1]')
+../Core/Src/cityDataBase.c:7:17: warning: braces around scalar initializer
+    7 |                 {"Chicago", 41.385,-87.623},
+      |                 ^
+../Core/Src/cityDataBase.c:7:17: note: (near initialization for 'ville[2]')
+../Core/Src/cityDataBase.c:7:18: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    7 |                 {"Chicago", 41.385,-87.623},
+      |                  ^~~~~~~~~
+../Core/Src/cityDataBase.c:7:18: note: (near initialization for 'ville[2]')
+../Core/Src/cityDataBase.c:7:29: warning: excess elements in scalar initializer
+    7 |                 {"Chicago", 41.385,-87.623},
+      |                             ^~~~~~
+../Core/Src/cityDataBase.c:7:29: note: (near initialization for 'ville[2]')
+../Core/Src/cityDataBase.c:7:36: warning: excess elements in scalar initializer
+    7 |                 {"Chicago", 41.385,-87.623},
+      |                                    ^
+../Core/Src/cityDataBase.c:7:36: note: (near initialization for 'ville[2]')
+../Core/Src/cityDataBase.c:8:17: warning: braces around scalar initializer
+    8 |                 {"Barcelone",41.385,2.173}
+      |                 ^
+../Core/Src/cityDataBase.c:8:17: note: (near initialization for 'ville[3]')
+../Core/Src/cityDataBase.c:8:18: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    8 |                 {"Barcelone",41.385,2.173}
+      |                  ^~~~~~~~~~~
+../Core/Src/cityDataBase.c:8:18: note: (near initialization for 'ville[3]')
+../Core/Src/cityDataBase.c:8:30: warning: excess elements in scalar initializer
+    8 |                 {"Barcelone",41.385,2.173}
+      |                              ^~~~~~
+../Core/Src/cityDataBase.c:8:30: note: (near initialization for 'ville[3]')
+../Core/Src/cityDataBase.c:8:37: warning: excess elements in scalar initializer
+    8 |                 {"Barcelone",41.385,2.173}
+      |                                     ^~~~~
+../Core/Src/cityDataBase.c:8:37: note: (near initialization for 'ville[3]')
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+make: *** [Core/Src/subdir.mk:70: Core/Src/cityDataBase.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:13:56 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/cityDataBase.c:4:1: warning: data definition has no type or storage class
+    4 | ville[4] = {
+      | ^~~~~
+../Core/Src/cityDataBase.c:4:1: error: type defaults to 'int' in declaration of 'ville' [-Wimplicit-int]
+../Core/Src/cityDataBase.c:4:1: error: conflicting types for 'ville'; have 'int[4]'
+In file included from ../Core/Src/cityDataBase.c:1:
+../Core/Inc/cityDataBase.h:7:14: note: previous declaration of 'ville' with type 'const VILLE *' {aka 'const struct ville *'}
+    7 | const VILLE *ville;
+      |              ^~~~~
+make: *** [Core/Src/subdir.mk:70: Core/Src/cityDataBase.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:169:23: warning: unused variable 'lon' [-Wunused-variable]
+  169 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:168:23: warning: unused variable 'lat' [-Wunused-variable]
+  168 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:14:49 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:177:23: warning: unused variable 'lon' [-Wunused-variable]
+  177 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:176:23: warning: unused variable 'lat' [-Wunused-variable]
+  176 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  46228	    120	   3800	  50148	   c3e4	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+17:17:17 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/cityDataBase.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cityDataBase.d" -MT"Core/Src/cityDataBase.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cityDataBase.o"
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:177:23: warning: unused variable 'lon' [-Wunused-variable]
+  177 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:176:23: warning: unused variable 'lat' [-Wunused-variable]
+  176 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:181:16: error: expected identifier or '(' before '=' token
+  181 |         VILLE* = findNearest(ville_2, 4, 50, 30);
+      |                ^
+make: *** [Core/Src/subdir.mk:70: Core/Src/utils.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:17:38 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:177:23: warning: unused variable 'lon' [-Wunused-variable]
+  177 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:176:23: warning: unused variable 'lat' [-Wunused-variable]
+  176 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:181:38: warning: passing argument 1 of 'findNearest' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  181 |         VILLE* nearest = findNearest(ville_2, 4, 50, 30);
+      |                                      ^~~~~~~
+In file included from ../Core/Src/utils.c:13:
+../Core/Inc/cityDataBase.h:8:26: note: expected 'VILLE *' {aka 'struct ville *'} but argument is of type 'const VILLE *' {aka 'const struct ville *'}
+    8 | VILLE* findNearest(VILLE tab[], int size, float latitude, float longitude);
+      |                    ~~~~~~^~~~~
+../Core/Src/utils.c:182:40: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'VILLE *' {aka 'struct ville *'} [-Wformat=]
+  182 |         snprintf(buffer, 16, "Ville : %s", nearest);
+      |                                       ~^   ~~~~~~~
+      |                                        |   |
+      |                                        |   VILLE * {aka struct ville *}
+      |                                        char *
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  50792	    120	   3800	  54712	   d5b8	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+17:17:55 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:177:23: warning: unused variable 'lon' [-Wunused-variable]
+  177 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:176:23: warning: unused variable 'lat' [-Wunused-variable]
+  176 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:181:38: warning: passing argument 1 of 'findNearest' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  181 |         VILLE* nearest = findNearest(ville_2, 4, 50, 30);
+      |                                      ^~~~~~~
+In file included from ../Core/Src/utils.c:13:
+../Core/Inc/cityDataBase.h:8:26: note: expected 'VILLE *' {aka 'struct ville *'} but argument is of type 'const VILLE *' {aka 'const struct ville *'}
+    8 | VILLE* findNearest(VILLE tab[], int size, float latitude, float longitude);
+      |                    ~~~~~~^~~~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  50796	    120	   3800	  54716	   d5bc	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+17:23:16 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50796	    120	   3800	  54716	   d5bc	TP1.elf
+Finished building: default.size.stdout
+ 
+17:23:39 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50796	    120	   3800	  54716	   d5bc	TP1.elf
+Finished building: default.size.stdout
+ 
+17:26:00 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:177:23: warning: unused variable 'lon' [-Wunused-variable]
+  177 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:176:23: warning: unused variable 'lat' [-Wunused-variable]
+  176 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:181:38: warning: passing argument 1 of 'findNearest' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  181 |         VILLE* nearest = findNearest(ville_2, 4, 49, -9);
+      |                                      ^~~~~~~
+In file included from ../Core/Src/utils.c:13:
+../Core/Inc/cityDataBase.h:8:26: note: expected 'VILLE *' {aka 'struct ville *'} but argument is of type 'const VILLE *' {aka 'const struct ville *'}
+    8 | VILLE* findNearest(VILLE tab[], int size, float latitude, float longitude);
+      |                    ~~~~~~^~~~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  50796	    120	   3800	  54716	   d5bc	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+17:27:29 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:177:23: warning: unused variable 'lon' [-Wunused-variable]
+  177 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:176:23: warning: unused variable 'lat' [-Wunused-variable]
+  176 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:181:38: warning: passing argument 1 of 'findNearest' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  181 |         VILLE* nearest = findNearest(ville_2, 4, 41, -9);
+      |                                      ^~~~~~~
+In file included from ../Core/Src/utils.c:13:
+../Core/Inc/cityDataBase.h:8:26: note: expected 'VILLE *' {aka 'struct ville *'} but argument is of type 'const VILLE *' {aka 'const struct ville *'}
+    8 | VILLE* findNearest(VILLE tab[], int size, float latitude, float longitude);
+      |                    ~~~~~~^~~~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  50796	    120	   3800	  54716	   d5bc	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 
+17:27:31 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-size  TP1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50796	    120	   3800	  54716	   d5bc	TP1.elf
+Finished building: default.size.stdout
+ 
+17:29:32 **** Incremental Build of configuration Debug for project TP1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/utils.d" -MT"Core/Src/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/utils.o"
+../Core/Src/utils.c: In function 'loop':
+../Core/Src/utils.c:177:23: warning: unused variable 'lon' [-Wunused-variable]
+  177 |                 float lon = getLongitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:176:23: warning: unused variable 'lat' [-Wunused-variable]
+  176 |                 float lat = getLatitude(buffer);
+      |                       ^~~
+../Core/Src/utils.c:181:38: warning: passing argument 1 of 'findNearest' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  181 |         VILLE* nearest = findNearest(ville_2, 4, 10, 9);
+      |                                      ^~~~~~~
+In file included from ../Core/Src/utils.c:13:
+../Core/Inc/cityDataBase.h:8:26: note: expected 'VILLE *' {aka 'struct ville *'} but argument is of type 'const VILLE *' {aka 'const struct ville *'}
+    8 | VILLE* findNearest(VILLE tab[], int size, float latitude, float longitude);
+      |                    ~~~~~~^~~~~
+arm-none-eabi-gcc -o "TP1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\redwo\Documents\travail\ENSEA\ENSEA_TP\TP_1A\système microcontroleur\code\TP1\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP1.elf
+ 
+arm-none-eabi-size  TP1.elf 
+arm-none-eabi-objdump -h -S TP1.elf  > "TP1.list"
+   text	   data	    bss	    dec	    hex	filename
+  50792	    120	   3800	  54712	   d5b8	TP1.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP1.list
+ 

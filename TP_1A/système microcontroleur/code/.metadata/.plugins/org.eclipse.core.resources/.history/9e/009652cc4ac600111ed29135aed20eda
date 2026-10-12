@@ -1,0 +1,17 @@
+#include "vile.h"
+#include "main.h"
+
+const VILLE ville[4] = {
+		{"Kiev",50.4510,30.5234},
+		{"Cergy",49.033,2.066},
+		{"Chicago", 41.385,-87.623},
+		{"Barcelone",41.385,2.173}
+};
+
+float pow(float x){
+	return x*x;
+}
+
+float norme(VILLE *v, float latitude, float longitude){
+	return pow(v->latitude-latitude) + (pow(v->longitude-longitude) * pow(cosf((v->latitude+latitude)/2)));
+}

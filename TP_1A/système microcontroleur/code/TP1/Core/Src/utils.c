@@ -10,7 +10,7 @@
 #include "utils.h"
 #include "ssd1315.h"
 #include "fonts.h"
-//#include "cityDataBase.h"
+#include "cityDataBase.h"
 #include <stdio.h>
 #include "usart.h"
 
@@ -30,14 +30,14 @@ int fillBuffer(char * buffer, int size){
 
 	//attend la réception d'un "$"
 	do{
-		HAL_UART_Receive(&huart1, (uint8_t*)&received_char, 1, 0);
+		HAL_UART_Receive(&huart1, (uint8_t*)&received_char, 1, HAL_MAX_DELAY);
 	}
 	while(received_char!='$');
 
 	//enregistre les différents caractères dans le buffer + calcul le nbr d'élément
 	do{
 		*buffer = received_char;
-		HAL_UART_Receive(&huart1, (uint8_t*)&received_char, 1, 0);
+		HAL_UART_Receive(&huart1, (uint8_t*)&received_char, 1, HAL_MAX_DELAY);
 		total++;
 		buffer++;
 	}
@@ -86,47 +86,60 @@ int checkFrame(char *buffer){
 	return (isGPGCA(buffer)&&(extractChecksum(buffer)==calculateChecksum(buffer)));
 }
 
-//renvoie la positon de la prochaine virgule
-int indexVirgule(char *frame){
+//renvoie la positon de la n-ième virgule
+int indexVirgule(char *frame, int n){
 	int i = 0;
-	while(*frame!=','){
+	while(n!=0){
 		frame++;
 		i++;
+		if(*frame==','){
+			n--;
+		}
 	}
 
 	return i;
 }
 
+int conv_hex_int(char x){
+	return x&0x0f;
+}
+
 //calcule la latitude contenu dans la frame
 float getLatitude(char *frame){
-	int indVirg = indexVirgule(frame);
-	float res = 2*(frame[indVirg+1]=='N')-1;
-	float angle = 10*frame[0]+frame[1];
-	float angleVirg = 0.01*frame[2]+0.001*frame[3];
-	for(int i=5; i<indVirg; i++){
-		angleVirg *= 10;
-		angleVirg += 0.001*frame[i];
-	}
+	int indVirg1 = indexVirgule(frame,2)+1;
+	int indVirg2 = indexVirgule(frame,3)+1;
+	float res = 2*(frame[indVirg2]=='N')-1;
+	float angle = 10*(frame[indVirg1]&0xf)+(frame[indVirg1+1]&0xf);
 
-	return res*(angle + 1/60*angleVirg);
+	float angleVirg = 10*(frame[indVirg1+2]&0xf)+(frame[indVirg1+3]&0xf);
+	angleVirg += 0.1*(frame[indVirg1+5]&0xf)+0.01*(frame[indVirg1+6]&0xf)+0.001*(frame[indVirg1+7]&0xf);
+
+	return res*(angle + 1.0/60.0*angleVirg);
 }
 
 //calcule la longitude contenu dans la frame
 float getLongitude(char *frame){
-	int indVirg = indexVirgule(frame);
-	float res = 2*(frame[indVirg+1]=='E')-1;
-	float angle = 10*frame[0]+frame[1];
-	float angleVirg = 0.01*frame[2]+0.001*frame[3];
-	for(int i=5; i<indVirg; i++){
-		angleVirg *= 10;
-		angleVirg += 0.001*frame[i];
-	}
+	int indVirg1 = indexVirgule(frame,4)+1;
+	int indVirg2 = indexVirgule(frame,5)+1;
+	float res = 2*(frame[indVirg2]=='E')-1;
+	float angle = 10*(frame[indVirg1]&0xf)+(frame[indVirg1+1]&0xf);
 
-	return res*(angle + 1/60*angleVirg);
+	float angleVirg = 10*(frame[indVirg1+2]&0xf)+(frame[indVirg1+3]&0xf);
+	angleVirg += 0.1*(frame[indVirg1+5]&0xf)+0.01*(frame[indVirg1+6]&0xf)+0.001*(frame[indVirg1+7]&0xf);
+
+	return res*(angle + 1.0/60.0*angleVirg);
 }
 
+
+const VILLE ville_2[4] = {
+		{"Kiev",50.4510,30.5234},
+		{"Cergy",49.033,2.066},
+		{"Chicago", 41.385,-87.623},
+		{"Barcelone",41.385,2.173}
+};
+
 void setup(){
-	printf ("TP1 ENSEA by A.T. \r\n");
+	printf ("\r\nTP1 ENSEA by A.T. \r\n");
 	ssd1315_Init();
 	ssd1315_Clear(SSD1315_COLOR_BLACK);
 	ssd1315_Draw_String(0,0,"Toi",&Font_16x26);
@@ -134,13 +147,9 @@ void setup(){
 	HAL_GPIO_WritePin(GPS_ENN_GPIO_Port,GPS_ENN_Pin,1);
 }
 
-static char buffer[BUFFER_MAX_SIZE]={0};
-
 void loop(){
 
 	//6.6.2
-//	int size = fillBuffer(buffer, BUFFER_MAX_SIZE);
-//	printf("Just received : %s \r\n",buffer);
 //	char received_char;
 //	HAL_UART_Abort(&huart1);
 //	while(HAL_UART_Receive(&huart1, (uint8_t *)&received_char, 1, 0)!=HAL_OK){}
@@ -150,17 +159,28 @@ void loop(){
 //	char buffer[BUFFER_MAX_SIZE];
 //	int size;
 //	while(1){
-//			size = fillBuffer(buffer, BUFFER_MAX_SIZE);
-//			printf("Received %d char : %s \n\r", size, buffer);
+//		size = fillBuffer(buffer, BUFFER_MAX_SIZE);
+//		printf("Received %d char : %s \n\r", size, buffer);
 //	}
 
 	//6.7
 	char buffer[BUFFER_MAX_SIZE];
 	int size = fillBuffer(buffer, BUFFER_MAX_SIZE);
-	printf("Just received : %s \r\n",size);
+	printf("Received %d char : %s \n\r", size, buffer);
+	printf("checkframe result : %d\r\n", checkFrame(buffer));
 	if(isGPGCA(buffer)==1){
 		printf("Trame GPGGA \r\n");
 		printf("Checksum -> calculated %x \t extract %x \r\n",
 		calculateChecksum(buffer), extractChecksum(buffer));
+
+		float lat = getLatitude(buffer);
+		float lon = getLongitude(buffer);
+
 	}
+
+	VILLE* nearest = findNearest(ville_2, 4, 10, 9);
+	snprintf(buffer, 16, "Ville : %s", nearest->nom);
+	ssd1315_Draw_String(0, 0, buffer, &Font_7x10);
+	ssd1315_Refresh();
+
 }

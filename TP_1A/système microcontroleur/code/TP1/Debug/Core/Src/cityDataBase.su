@@ -1,0 +1,3 @@
+../Core/Src/cityDataBase.c:11:7:pui2	16	static
+../Core/Src/cityDataBase.c:15:7:norme	32	static
+../Core/Src/cityDataBase.c:19:8:findNearest	40	static

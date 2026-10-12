@@ -4,7 +4,8 @@
 ../Core/Src/utils.c:73:5:calculateChecksum	24	static
 ../Core/Src/utils.c:85:5:checkFrame	24	static
 ../Core/Src/utils.c:90:5:indexVirgule	24	static
-../Core/Src/utils.c:101:7:getLatitude	48	static
-../Core/Src/utils.c:115:7:getLongitude	48	static
-../Core/Src/utils.c:128:6:setup	8	static
-../Core/Src/utils.c:139:6:loop	152	static
+../Core/Src/utils.c:103:5:conv_hex_int	16	static
+../Core/Src/utils.c:108:7:getLatitude	56	static
+../Core/Src/utils.c:121:7:getLongitude	56	static
+../Core/Src/utils.c:141:6:setup	8	static
+../Core/Src/utils.c:150:6:loop	160	static

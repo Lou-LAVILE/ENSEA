@@ -3,8 +3,9 @@
 ../Core/Src/utils.c:63:5:extractChecksum	2
 ../Core/Src/utils.c:73:5:calculateChecksum	2
 ../Core/Src/utils.c:85:5:checkFrame	3
-../Core/Src/utils.c:90:5:indexVirgule	2
-../Core/Src/utils.c:101:7:getLatitude	3
-../Core/Src/utils.c:115:7:getLongitude	3
-../Core/Src/utils.c:128:6:setup	1
-../Core/Src/utils.c:139:6:loop	2
+../Core/Src/utils.c:90:5:indexVirgule	3
+../Core/Src/utils.c:103:5:conv_hex_int	1
+../Core/Src/utils.c:108:7:getLatitude	2
+../Core/Src/utils.c:121:7:getLongitude	2
+../Core/Src/utils.c:141:6:setup	1
+../Core/Src/utils.c:150:6:loop	2

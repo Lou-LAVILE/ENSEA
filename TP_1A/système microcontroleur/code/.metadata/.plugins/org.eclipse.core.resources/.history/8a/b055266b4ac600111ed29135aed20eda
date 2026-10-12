@@ -1,0 +1,13 @@
+#include "vile.h"
+#include "main.h"
+
+const VILLE ville[4] = {
+		{"Kiev",50.4510,30.5234},
+		{"Cergy",49.033,2.066},
+		{"Chicago", 41.385,-87.623},
+		{"Barcelone",41.385,2.173}
+};
+
+float norme(VILLE *v, float latitude, float longitude){
+	return (v->latitude-latitude)^2 + ((v->longitude-longitude)^2 cos((v->latitude+latitude)/2))^2;
+}
