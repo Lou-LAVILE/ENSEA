@@ -9,9 +9,7 @@ __pycache__
 ressource
 
 #stm32
-*/systeme_microcontroleur/code/
-
-
-#exeption
-!*.ioc
-!core
+*/systeme_microcontroleur/code/.*
+*/systeme_microcontroleur/code/*/*
+!*/systeme_microcontroleur/code/**/Core
+!*/systeme_microcontroleur/code/*/*.ioc
