@@ -1,8 +1,0 @@
-typedef struct ville {
-	char* nom;
-	float latitude;
-	float longitude;
-} VILLE;
-
-float norme(VILLE *v, float latitude, float longitude);
-VILLE* findNearest(VILLE tableau[], int size, float latitude, float longitude);

@@ -1,5 +1,0 @@
-typedef struct ville {
-	char* nom;
-	float latitude;
-	float longitude;
-};

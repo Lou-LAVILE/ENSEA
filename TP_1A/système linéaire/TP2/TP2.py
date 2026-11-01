@@ -51,7 +51,23 @@ Vs_step = np.array([ 0.15, 0.28, 1.98, 1.97, 1.86, 1.18, 1.02, 0.82])
 plt.figure(1, figsize=(8,6))
 plt.subplot(2,1,1)
 #plt.plot(t, Vs_step,'ro', markersize=6, label="measures")
-plt.plot(t_step, y_step)
+plt.plot(t_step, y_step, 'b-', label="model théorique")
+
+#
+# modèle réduit réponse indcielle
+#
+"""
+# Model frequency response
+p = ctrl.tf('s')
+Ha = 1 / (1 + tau*p)
+Hb = 1 / (p**2/w0**2 + 2*m*p/w0 + 1)
+H = K * Ha
+
+# Computing the Responses
+t_step, y_step = ctrl.step_response(H)
+t_imp, y_imp = ctrl.impulse_response(H)
+"""
+
 """
 # Horizontal line at 5% ?
 plt.axhline(1.05*K, color='b', linestyle=':', linewidth=3)
@@ -80,22 +96,25 @@ plt.plot(t63, 0.63*K, 'r*', markersize=20)
 # A text label to indicate the 63% value ?
 plt.annotate("63 %", xy=(t63, 0.63*K), color='r',xytext=(10, -15), textcoords='offset points')
 """
+
+"""
 plt.title("Step Response")
 plt.xlabel("time (s)")
 plt.ylabel("amplitude")
 plt.grid(True)
-
 """
-# And plot the impulse response
-plt.subplot(2,1,2)
+
+# Plot the step response
+plt.figure(1, figsize=(8,6))
+plt.subplot(2,1,1)
+#plt.plot(t, Vs_step,'ro', markersize=6, label="measures")
+plt.plot(t_step, y_step, 'g-', label="model réduit")
 
 #plt.plot(t, Vs_imp,'ro', markersize=6, label="measures")
-plt.plot(t_imp, y_imp)
 plt.title("Impulse Response")
 plt.xlabel("time (s)")
 plt.ylabel("amplitude")
 plt.grid(True)
-"""
 
 # Formatting and show the plot
 plt.tight_layout()
@@ -110,7 +129,7 @@ plt.show()
 f_meas = data["frequence"]
 Ve_meas = data["Ve"]
 Vs_meas = data["Vs"]
-dt_meas = data["dt"]
+#dt_meas = data["dt"]
 Phi_meas = -1*data["phi"]
 
 """
@@ -153,17 +172,51 @@ Phi = np.angle(H, deg=True)
 
 # Superimpose on the measured points
 plt.subplot(2,1,1)
-plt.semilogx(f_axis, GdB, 'b-', label="model")
+plt.semilogx(f_axis, GdB, 'b-', label="model théorique")
 plt.ylabel("Gain (dB)")
 plt.grid(True, which="both")
 plt.legend(loc="lower left")
 
 # And the phase
 plt.subplot(2,1,2)
-plt.semilogx(f_axis, Phi, 'b-', label="model")
+plt.semilogx(f_axis, Phi, 'b-', label="model théorique")
 plt.xlabel("frequency (Hz)")
 plt.ylabel("Phase (°)")
 plt.grid(True, which="both")
+
+#
+# modèle réduit
+#
+
+# Model frequency response
+p = 1j*w_axis
+Ha = 1 / (1 + tau*p)
+Hb = 1 / (p**2/w0**2 + 2*m*p/w0 + 1)
+H = K * Ha
+
+GdB = 20*np.log10(np.abs(H))
+Phi = np.angle(H, deg=True)
+
+# Superimpose on the measured points
+plt.subplot(2,1,1)
+plt.semilogx(f_axis, GdB, 'g-', label="model réduit")
+plt.ylabel("Gain (dB)")
+plt.grid(True, which="both")
+plt.legend(loc="lower left")
+plt.title("gain")
+
+# And the phase
+plt.subplot(2,1,2)
+plt.semilogx(f_axis, Phi, 'g-', label="model réduit")
+plt.xlabel("frequency (Hz)")
+plt.ylabel("Phase (°)")
+plt.grid(True, which="both")
+plt.title("phase")
+
+# Formatting and show the plot
+
+plt.tight_layout()
+plt.show()
 
 #
 # pôle and réduction
@@ -191,12 +244,18 @@ ctrl.pzmap(H, grid=True)
 plt.tight_layout()
 plt.show()
 
-
-
-
 #
 # Bode and Black curb
 #
+
+# Or with num / den form :
+numa = [K] # first-order block
+dena = [tau, 1]
+numb = [1] # second-order block
+denb = [1/w0**2, 2*m/w0, 1]
+num = np.polymul(numa, numb) # multiplying each part
+den = np.polymul(dena, denb)
+H = ctrl.TransferFunction(num, den) # and redefine the TF
 
 # The margins (always on the OL= Open Loop) ?
 gm, pm, wcg, wcp = ctrl.margin(H) # the essential 4 values
@@ -214,3 +273,8 @@ T = ctrl.feedback(H, 1) # CL with unity feedback
 ctrl.step_info(T, SettlingTimeThreshold=0.05) # overshoot, settling time
 np.max(np.abs(T(1j*w_axis))) # resonant peak
 ctrl.damp(T) # damping of the CL poles
+
+
+# Formatting and show the plot
+plt.tight_layout()
+plt.show()
